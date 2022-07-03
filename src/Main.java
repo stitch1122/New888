@@ -6,8 +6,10 @@ public class Main {
         System.out.println("Калькулятор для решения квадратных уравнений");
         System.out.println("Вид уравнения: ax^2+bx+c=0");
         Scanner scanner = new Scanner(System.in);
-        String answer = scanner.next();
+        String needContinue;
         do {
+
+
             System.out.print("Введите число a:");
             double a = scanner.nextDouble();
             if (a == 0) {
@@ -37,16 +39,17 @@ public class Main {
                     System.out.println("Уравнение не имеет корней");
                 }
             }
-           //  String answer = scanner.next();
-            //    if (answer.equals("да"));
-            //{
-            //    System.out.println("Отлично, продолжаем");
-            //}   if else {
-           //     System.out.println("Все");
-            //}
+            System.out.print("Продолжить? Введите да или нет: ");
+            needContinue = scanner.next();
+            if (needContinue.equals("да")) {
+                System.out.println("Отлично, продолжаем");
+            } else {
+            System.out.println("все");
+            }
 
-        } while (answer.equals("да"));
-    }
+        } while (!needContinue.equals("нет"));
+            // птвл
+        }
 }
 
 
